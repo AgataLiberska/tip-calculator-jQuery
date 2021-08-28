@@ -11,77 +11,83 @@
 
 </head>
 <body>
-  <header>
-    <img src="images/logo.svg" alt="Splitter logo">
-  </header>
-  <main class="splitter">
-    <!-- This is the input part -->
-    <div>
-      <form>
-        <div class="splitter__form-control">
-          <label for="bill" class="splitter__label">Bill</label>
-          <input id="bill" type="number" class="splitter__input" placeholder="0.00">
-        </div>
-        <fieldset class="splitter__form-control">
-          <legend class="splitter__label">Select tip %</legend>
-            
-            <div class="splitter__tipValues">
-              <div class="splitter__tip">
-                <input type="radio" id="5" name="tipValue" class="splitter__value-radio">
-                <label for="5" class="splitter__value-label">5%</label>
-              </div>
-  
-              <div class="splitter__tip">
-                <input type="radio" id="10" name="tipValue" class="splitter__value-radio">
-                <label for="10" class="splitter__value-label">10%</label>
-              </div>
-  
-              <div class="splitter__tip">
-                <input type="radio" id="15" name="tipValue" class="splitter__value-radio">
-                <label for="15" class="splitter__value-label">15%</label>
-              </div>
 
-              <div class="splitter__tip">
-                <input type="radio" id="25" name="tipValue" class="splitter__value-radio">
-                <label for="25" class="splitter__value-label">25%</label>
-              </div>
-
-              <div class="splitter__tip">
-                <input type="radio" id="50" name="tipValue" class="splitter__value-radio">
-                <label for="50" class="splitter__value-label">50%</label>
-              </div>
-
-              <div class="splitter__tip">
-                <input type="radio" id="custom" name="tipValue" class="splitter__value-radio">
-                <label for="custom" class="splitter__value-label splitter__value-custom">Custom</label>
+  <main>
+    <header>
+      <img src="images/logo.svg" alt="Splitter logo">
+    </header>
+    <section  class="splitter">
+      <!-- This is the input part -->
+      <div>
+        <form>
+          <div class="splitter__form-control">
+            <label for="bill" class="splitter__label">Bill</label>
+            <input id="bill" type="number" class="splitter__input" placeholder="0.00">
+          </div>
+          <fieldset class="splitter__form-control">
+            <legend class="splitter__label">Select tip %</legend>
+              
+              <div class="splitter__tipValues">
+                <div class="splitter__tip">
+                  <input type="radio" id="5" name="tipValue" class="splitter__value-radio">
+                  <label for="5" class="splitter__value-label">5%</label>
+                </div>
     
-                <input type="number" id="customValue" aria-label="Input tip %" class="splitter__custom-input hidden" placeholder="Custom">
+                <div class="splitter__tip">
+                  <input type="radio" id="10" name="tipValue" class="splitter__value-radio">
+                  <label for="10" class="splitter__value-label">10%</label>
+                </div>
+    
+                <div class="splitter__tip">
+                  <input type="radio" id="15" name="tipValue" class="splitter__value-radio">
+                  <label for="15" class="splitter__value-label">15%</label>
+                </div>
+  
+                <div class="splitter__tip">
+                  <input type="radio" id="25" name="tipValue" class="splitter__value-radio">
+                  <label for="25" class="splitter__value-label">25%</label>
+                </div>
+  
+                <div class="splitter__tip">
+                  <input type="radio" id="50" name="tipValue" class="splitter__value-radio">
+                  <label for="50" class="splitter__value-label">50%</label>
+                </div>
+  
+                <div class="splitter__tip">
+                  <input type="radio" id="custom" name="tipValue" class="splitter__value-radio">
+                  <label for="custom" class="splitter__value-label splitter__value-custom">Custom</label>
+      
+                  <input type="number" id="customValue" aria-label="Input tip %" class="splitter__custom-input hidden" placeholder="Custom">
+                </div>
+  
               </div>
-
-            </div>
-            
-
-        </fieldset>
-
-        <div class="splitter__form-control">
-          <label for="guests" class="splitter__label">Number of People</label>
-          <input type="number" min="0" class="splitter__input" placeholder="0">
+              
+  
+          </fieldset>
+  
+          <div class="splitter__form-control">
+            <label for="guests" class="splitter__label">Number of People</label>
+            <input type="number" min="0" class="splitter__input" placeholder="0">
+          </div>
+        </form>
+      </div>
+      <!-- This is the output part -->
+      <div class="splitter__output-container">
+        <div>
+          <div class="splitter__result">
+            <h2 class="splitter__heading">Tip amount <span class="splitter__person">/ person</span></h2>
+            <p class="splitter__amount">$0.00</p>
+          </div>
+          <div class="splitter__result">
+            <h2 class="splitter__heading">Total <span class="splitter__person">/ person</span></h2>
+            <p class="splitter__amount">$0.00</p>
+          </div>
         </div>
-      </form>
-    </div>
-    <!-- This is the output part -->
-    <div class="splitter__output-container">
-      <div class="splitter__result">
-        <h2 class="splitter__heading">Tip amount <span class="splitter__person">/ person</span></h2>
-        <p class="splitter__amount">$0.00</p>
+ 
+        <button class="splitter__reset">Reset</button>
       </div>
-      <div class="splitter__result">
-        <h2 class="splitter__heading">Total <span class="splitter__person">/ person</span></h2>
-        <p class="splitter__amount">$0.00</p>
-      </div>
-
-      <button class="splitter__reset">Reset</button>
-    </div>
+    </section>
+    
   </main>
 </body>
 </html>

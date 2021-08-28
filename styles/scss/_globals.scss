@@ -6,20 +6,23 @@
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-items: center;
     min-height: 100vh;
     background: $main-bg;
     font-family: 'Space Mono', monospace;    
 }
 
+main {
+    width: 100%;
+}
+
 header {
     margin-top: 3.125rem;
     margin-bottom: 2.5rem;
+    text-align: center;
 
-    @include breakpoint-up(medium) {
+    @include breakpoint-up(large) {
         margin-top: unset;
         margin-bottom: 5.5rem;
     }

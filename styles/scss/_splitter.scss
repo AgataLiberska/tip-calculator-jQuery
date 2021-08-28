@@ -2,14 +2,32 @@
     display: grid;
     grid-template-rows: auto auto;
     width: 100%;
+    max-width: 32rem;
+    margin: auto;
     padding: 2rem;
     background-color: $app-bg;
     border-top-left-radius: 1.5625rem;
     border-top-right-radius: 1.5625rem;
 
+    @include breakpoint-up(large) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 2rem;
+        max-width: 51.25rem;
+        border-radius: 1.5625rem;
+    }
+
     &__form-control {
         margin-bottom: 2rem;
         border: none;
+
+        @include breakpoint-up(large) {
+            margin-bottom: 2.5rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
     }
 
     &__label {
@@ -42,6 +60,11 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
+
+        @include breakpoint-up(large) {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem 0.875rem;
+        }
     }
 
     &__tip {
@@ -58,6 +81,10 @@
         font-weight: 700;
         text-align: center;
         line-height: 2.25rem;
+
+        @include breakpoint-up(large) {
+            padding: 0.375rem 0.875rem;
+        }
     }
 
     &__value-radio {
@@ -111,11 +138,19 @@
         padding: 2.25rem 1.5rem 1.5rem;
         background: $result-bg;
         border-radius: 0.9375rem;
+
+        @include breakpoint-up(large) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 2.5rem;
+        }
     }
 
     &__result {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         margin-bottom: 1.25rem;
 
         &:last-of-type {
@@ -141,6 +176,10 @@
         font-size: 2rem;
         color: $font-accent;
         text-align: right;
+
+        @include breakpoint-up(large) {
+            font-size: 3rem;
+        }
     }
 
     &__reset {
@@ -161,6 +200,5 @@
         &:hover, &:focus {
             background: $reset-hover;
         }
-        
     }
 }
