@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles/css/styles.css">
   
   <title>Frontend Mentor | Tip calculator app</title>
 
@@ -13,55 +14,73 @@
   <header>
     <img src="images/logo.svg" alt="Splitter logo">
   </header>
-  <main>
+  <main class="splitter">
+    <!-- This is the input part -->
     <div>
       <form>
-        <div>
-          <label for="bill">Bill</label>
-          <input id="bill" type="number">
+        <div class="splitter__form-control">
+          <label for="bill" class="splitter__label">Bill</label>
+          <input id="bill" type="number" class="splitter__input" placeholder="0.00">
         </div>
-        <fieldset>
-          <legend>Select tip %</legend>
+        <fieldset class="splitter__form-control">
+          <legend class="splitter__label">Select tip %</legend>
+            
+            <div class="splitter__tipValues">
+              <div class="splitter__tip">
+                <input type="radio" id="5" name="tipValue" class="splitter__value-radio">
+                <label for="5" class="splitter__value-label">5%</label>
+              </div>
+  
+              <div class="splitter__tip">
+                <input type="radio" id="10" name="tipValue" class="splitter__value-radio">
+                <label for="10" class="splitter__value-label">10%</label>
+              </div>
+  
+              <div class="splitter__tip">
+                <input type="radio" id="15" name="tipValue" class="splitter__value-radio">
+                <label for="15" class="splitter__value-label">15%</label>
+              </div>
 
-            <input type="radio" id="5" name="tipValue">
-            <label for="5">5%</label>
+              <div class="splitter__tip">
+                <input type="radio" id="25" name="tipValue" class="splitter__value-radio">
+                <label for="25" class="splitter__value-label">25%</label>
+              </div>
 
-            <input type="radio" id="10" name="tipValue">
-            <label for="5">10%</label>
+              <div class="splitter__tip">
+                <input type="radio" id="50" name="tipValue" class="splitter__value-radio">
+                <label for="50" class="splitter__value-label">50%</label>
+              </div>
 
-            <input type="radio" id="15" name="tipValue">
-            <label for="5">15%</label>
+              <div class="splitter__tip">
+                <input type="radio" id="custom" name="tipValue" class="splitter__value-radio">
+                <label for="custom" class="splitter__value-label splitter__value-custom">Custom</label>
+    
+                <input type="number" id="customValue" aria-label="Input tip %" class="splitter__custom-input hidden" placeholder="Custom">
+              </div>
 
-            <input type="radio" id="25" name="tipValue">
-            <label for="5">5%</label>
-
-            <input type="radio" id="50" name="tipValue">
-            <label for="5">5%</label>
-
-            <input type="radio" id="custom" name="tipValue">
-            <label for="5">Custom</label>
-
-            <input type="number" id="customValue" aria-label="Input tip %">
+            </div>
+            
 
         </fieldset>
 
-        <div>
-          <label for="guests">Number of People</label>
-          <input type="number" min="0">
+        <div class="splitter__form-control">
+          <label for="guests" class="splitter__label">Number of People</label>
+          <input type="number" min="0" class="splitter__input" placeholder="0">
         </div>
       </form>
     </div>
-    <div>
-      <div>
-        <h2>Tip amount <span>/ person</span></h2>
-        <p>$0.00</p>
+    <!-- This is the output part -->
+    <div class="splitter__output-container">
+      <div class="splitter__result">
+        <h2 class="splitter__heading">Tip amount <span class="splitter__person">/ person</span></h2>
+        <p class="splitter__amount">$0.00</p>
       </div>
-      <div>
-        <h2>Total <span>/ person</span></h2>
-        <p>$0.00</p>
+      <div class="splitter__result">
+        <h2 class="splitter__heading">Total <span class="splitter__person">/ person</span></h2>
+        <p class="splitter__amount">$0.00</p>
       </div>
 
-      <button>Reset</button>
+      <button class="splitter__reset">Reset</button>
     </div>
   </main>
 </body>

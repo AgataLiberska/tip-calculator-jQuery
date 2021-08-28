@@ -2,7 +2,232 @@
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: inherit;
   margin: 0;
   padding: 0;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background: #C5E4E7;
+  font-family: 'Space Mono', monospace;
+}
+
+header {
+  margin-top: 3.125rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 48rem) {
+  header {
+    margin-top: unset;
+    margin-bottom: 5.5rem;
+  }
+}
+
+label {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.splitter {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+  width: 100%;
+  padding: 2rem;
+  background-color: #FFFFFF;
+  border-top-left-radius: 1.5625rem;
+  border-top-right-radius: 1.5625rem;
+}
+
+.splitter__form-control {
+  margin-bottom: 2rem;
+  border: none;
+}
+
+.splitter__label {
+  margin-bottom: 0.375rem;
+  font-weight: 700;
+  color: #5E7A7D;
+}
+
+.splitter__input {
+  width: 100%;
+  padding: 0.375rem 1rem;
+  background-color: #F3F9FA;
+  border: 2px solid #F3F9FA;
+  border-radius: 0.3125rem;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  text-align: right;
+}
+
+.splitter__input::-webkit-input-placeholder {
+  color: #9EBBBD;
+}
+
+.splitter__input:-ms-input-placeholder {
+  color: #9EBBBD;
+}
+
+.splitter__input::-ms-input-placeholder {
+  color: #9EBBBD;
+}
+
+.splitter__input::placeholder {
+  color: #9EBBBD;
+}
+
+.splitter__input:focus {
+  outline: 0;
+  border: 2px solid #26C2AE;
+}
+
+.splitter__tipValues {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.splitter__tip {
+  position: relative;
+}
+
+.splitter__value-label {
+  width: 100%;
+  padding: 0.375rem 0;
+  background: #00474B;
+  border-radius: 0.3125rem;
+  color: #FFF;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 2.25rem;
+}
+
+.splitter__value-radio {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.splitter__value-radio:hover + label {
+  background-color: #9FE8DF;
+  color: #00474B;
+}
+
+.splitter__value-radio:checked + label {
+  background-color: #26C2AE;
+  color: #00474B;
+}
+
+.splitter__value-custom {
+  position: relative;
+  background: #F3F9FA;
+  color: #5E7A7D;
+  z-index: 2;
+}
+
+.splitter__custom-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #F3F9FA;
+  border: 2px solid #F3F9FA;
+  text-align: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #5E7A7D;
+  z-index: 4;
+}
+
+.splitter__custom-input:focus {
+  outline: 0;
+  border: 2px solid #26C2AE;
+}
+
+.splitter__output-container {
+  padding: 2.25rem 1.5rem 1.5rem;
+  background: #00474B;
+  border-radius: 0.9375rem;
+}
+
+.splitter__result {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  margin-bottom: 1.25rem;
+}
+
+.splitter__result:last-of-type {
+  margin-bottom: 2rem;
+}
+
+.splitter__heading {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  color: #FFF;
+}
+
+.splitter__person {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #7F9D9F;
+}
+
+.splitter__amount {
+  font-size: 2rem;
+  color: #26C2AE;
+  text-align: right;
+}
+
+.splitter__reset {
+  width: 100%;
+  padding: 0.5625rem 0;
+  background: #26C2AE;
+  border-radius: 0.3175rem;
+  border: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #00474B;
+  text-transform: uppercase;
+}
+
+.splitter__reset:disabled {
+  background: #0D686D;
+}
+
+.splitter__reset:hover, .splitter__reset:focus {
+  background: #9FE8DF;
 }
 /*# sourceMappingURL=styles.css.map */
