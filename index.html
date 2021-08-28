@@ -8,37 +8,61 @@
   
   <title>Frontend Mentor | Tip calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <header>
+    <img src="images/logo.svg" alt="Splitter logo">
+  </header>
+  <main>
+    <div>
+      <form>
+        <div>
+          <label for="bill">Bill</label>
+          <input id="bill" type="number">
+        </div>
+        <fieldset>
+          <legend>Select tip %</legend>
 
-  Bill
+            <input type="radio" id="5" name="tipValue">
+            <label for="5">5%</label>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+            <input type="radio" id="10" name="tipValue">
+            <label for="5">10%</label>
 
-  Number of People
+            <input type="radio" id="15" name="tipValue">
+            <label for="5">15%</label>
 
-  Tip Amount
-  / person
+            <input type="radio" id="25" name="tipValue">
+            <label for="5">5%</label>
 
-  Total
-  / person
+            <input type="radio" id="50" name="tipValue">
+            <label for="5">5%</label>
 
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+            <input type="radio" id="custom" name="tipValue">
+            <label for="5">Custom</label>
+
+            <input type="number" id="customValue" aria-label="Input tip %">
+
+        </fieldset>
+
+        <div>
+          <label for="guests">Number of People</label>
+          <input type="number" min="0">
+        </div>
+      </form>
+    </div>
+    <div>
+      <div>
+        <h2>Tip amount <span>/ person</span></h2>
+        <p>$0.00</p>
+      </div>
+      <div>
+        <h2>Total <span>/ person</span></h2>
+        <p>$0.00</p>
+      </div>
+
+      <button>Reset</button>
+    </div>
+  </main>
 </body>
 </html>
